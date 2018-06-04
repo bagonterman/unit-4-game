@@ -1,0 +1,77 @@
+.wrapper.characters{
+    /* background-color: rgb(197, 152, 84); */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-columns: 100%; */
+    padding: 1%;
+    grid-gap: 10px;
+
+}
+.wrapper.myButtons{
+    /* background-color: rgb(197, 152, 84); */
+    display: grid;
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+    -webkit-transition: width 2s;
+    /* justify-content: center; */
+    padding: 1%;
+    grid-gap: 10px;
+    margin-left:300px;
+
+}
+.button{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    
+
+
+}
+.wrapper.myButtons:hover {
+    width: 50%;
+}
+
+
+
+div.charOne{
+    background-image: url("../images/Malakili.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;
+    padding-top:100px;
+    margin-left:8%;
+ }
+ div.charTwo{
+    background-image: url("../images/Chewie.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;
+    padding-top:100px;
+    margin-left:8%;
+ }
+ div.charThree{
+    background-image: url("../images/Greedo.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;
+    padding-top:100px;
+    margin-left:8%;
+ }
+ div.charFour{
+    background-image: url("../images/landocalrissian.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;
+    padding-top:100px;
+    margin-left:8%;
+ }
+ div.charFive{
+    background-image: url("../images/Kitonak.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;
+    padding-top:100px;
+    margin-left:8%;
+ }
