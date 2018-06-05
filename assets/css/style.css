@@ -1,3 +1,11 @@
+h1{
+    /* font-family: 'Tajawal', sans-serif; */
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 35px;
+    margin-top:20px;
+    letter-spacing: 10px; 
+    text-align: center;
+}
 .wrapper.characters{
     /* background-color: rgb(197, 152, 84); */
     display: grid;
@@ -74,4 +82,34 @@ div.charOne{
     padding:60%;
     padding-top:100px;
     margin-left:8%;
+ }
+
+ div.defender{
+     /* 
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;*/
+    display: grid;
+    width: 180px;
+    height: 180px;
+
+
+ } 
+ /* div.yourCharacter{
+  
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   width: 180px;
+   height: 180px;
+
+
+}  */
+div.yourCharacter{
+  
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    width: 180px;
+    height: 180px;
+ 
+ 
  }

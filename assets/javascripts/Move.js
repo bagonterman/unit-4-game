@@ -78,7 +78,7 @@
         }
         
        var clssName= $("."+clss).attr('class');
-       clssName=="charOne"?(movement=80,id = setInterval(function(){ frame(char.char1.character,movement) }, 3),enemyId1 = setInterval(function(){ enemy1(char.char2.character) }, 3),enemyId2 = setInterval(function(){ enemy2(char.char3.character) }, 3),enemyId3 = setInterval(function(){ enemy3(char.char4.character) }, 3),enemyId4 = setInterval(function(){ enemy4(char.char5.character) }, 3)):(clssName=="charTwo"?(movement=80,id = setInterval(function(){ frame(char.char2.character,movement) }, 3),enemyId1 = setInterval(function(){ enemy1(char.char1.character) }, 3),enemyId2 = setInterval(function(){ enemy2(char.char3.character) }, 3),enemyId3 = setInterval(function(){ enemy3(char.char4.character) }, 3),enemyId4 = setInterval(function(){ enemy4(char.char5.character) }, 3)):( movement=50,id = setInterval(function(){ frame(char.char2.character,movement) }, 3)))
+       clssName=="charOne"?(movement=110,id = setInterval(function(){ frame(char.char1.character,movement) }, 7),enemyId1 = setInterval(function(){ enemy1(char.char2.character) }, 7),enemyId2 = setInterval(function(){ enemy2(char.char3.character) }, 7),enemyId3 = setInterval(function(){ enemy3(char.char4.character) }, 7),enemyId4 = setInterval(function(){ enemy4(char.char5.character) }, 7)):(clssName=="charTwo"?(movement=110,id = setInterval(function(){ frame(char.char2.character,movement) }, 7),enemyId1 = setInterval(function(){ enemy1(char.char1.character) }, 7),enemyId2 = setInterval(function(){ enemy2(char.char3.character) }, 7),enemyId3 = setInterval(function(){ enemy3(char.char4.character) }, 7),enemyId4 = setInterval(function(){ enemy4(char.char5.character) }, 7)):(clssName=="charThree"?(movement=110,id = setInterval(function(){ frame(char.char3.character,movement) }, 7),enemyId1 = setInterval(function(){ enemy1(char.char1.character) }, 7),enemyId2 = setInterval(function(){ enemy2(char.char2.character) }, 7),enemyId3 = setInterval(function(){ enemy3(char.char4.character) }, 7),enemyId4 = setInterval(function(){ enemy4(char.char5.character) }, 7)):(clssName=="charFour"?(movement=110,id = setInterval(function(){ frame(char.char4.character,movement) }, 7),enemyId1 = setInterval(function(){ enemy1(char.char1.character) }, 7),enemyId2 = setInterval(function(){ enemy2(char.char2.character) }, 7),enemyId3 = setInterval(function(){ enemy3(char.char3.character) }, 7),enemyId4 = setInterval(function(){ enemy4(char.char5.character) }, 7)):(clssName=="charFive"?(movement=110,id = setInterval(function(){ frame(char.char5.character,movement) }, 7),enemyId1 = setInterval(function(){ enemy1(char.char1.character) }, 7),enemyId2 = setInterval(function(){ enemy2(char.char3.character) }, 7),enemyId3 = setInterval(function(){ enemy3(char.char4.character) }, 7),enemyId4 = setInterval(function(){ enemy4(char.char2.character) }, 7)):( movement=50,id = setInterval(function(){ frame(char.char2.character,movement) }, 7))))))
         //var enemyId = setInterval(function(){ enemy(char.char2.character) }, 3);
         // var hero = document.getElementsByClassName(clss)[0];  
         
@@ -103,7 +103,7 @@
         }  
 
         function enemy1(elem,movement) {
-            movement=50;
+            movement=70;
              upOrDown=posEn1++;
              //console.log(upOrDown);
              if (upOrDown == movement) {
@@ -117,7 +117,7 @@
                  
              }  
              function enemy2(elem,movement) {
-                movement=50;
+                movement=70;
                  upOrDown=posEn2++;
                  //console.log(upOrDown);
                  if (upOrDown == movement) {
@@ -131,7 +131,7 @@
                      
                  } 
                  function enemy3(elem,movement) {
-                    movement=50;
+                    movement=70;
                      upOrDown=posEn3++;
                      //console.log(upOrDown);
                      if (upOrDown == movement) {
@@ -145,7 +145,7 @@
                          
                      }   
                      function enemy4(elem,movement) {
-                        movement=50;
+                        movement=70;
                          upOrDown=posEn4++;
                          //console.log(upOrDown);
                          if (upOrDown == movement) {

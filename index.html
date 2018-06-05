@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Arvo:700|Tajawal" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascripts/move.js"></script>
@@ -12,6 +14,13 @@
     <title>Attack</title>
 </head>
 <body>
+    <div id="header">
+        <h1>
+            <strong>
+            THIS MEANS WAR!
+            </strong>
+        </h1>
+    </div>
     <div class="wrapper characters">
         <div class="charOne" >
         </div>
@@ -29,6 +38,14 @@
                 <button type="button">VENGENCE</button>
         <!-- </div> -->
             
+    </div>
+    <div class="yourCharacter">
+            
+
+    </div>
+    <div class="defender">
+            
+
     </div>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -59,27 +76,92 @@
         //     baseAttackPoints:20
         // }
 });
+countClick1=0;
+countClick2=0;
+countClick3=0;
+countClick4=0;
+countClick5=0;
+countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 
 $(".charOne").on("click", function() {
-    // alert("hey");
+    countClick1++
+    countClick2++
+    countClick3++;
+    countClick4++;
+    countClick5++;
+    if(countClick1==1){
     myMove("charOne"); 
+    // $(".wrapper.buttons").css({top: 200, left: 200, position:'absolute'})
+    // $(".wrapper.myButtons").appendTo(".yourCharacter");
+    $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    $(".charOne").appendTo(".yourCharacter");
+    }
+    if(countClick1==2){
+        $(".charOne").appendTo(".defender");
+    }
 });
 $(".charTwo").on("click", function() {
-    // alert("hey");
+    countClick1++
+    countClick2++
+    countClick3++;
+    countClick4++;
+    countClick5++;
+    if(countClick2==1){
     myMove("charTwo"); 
+    $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    $(".charTwo").appendTo(".yourCharacter");
+    }
+    if(countClick2==2){
+        $(".charTwo").appendTo(".defender");
+    }
 });
 $(".charThree").on("click", function() {
-    // alert("hey");
+    countClick1++
+    countClick2++
+    countClick3++;
+    countClick4++;
+    countClick5++;
+    if(countClick3==1){
     myMove("charThree"); 
+    $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    $(".charThree").appendTo(".yourCharacter");
+    }
+    if(countClick3==2){
+        $(".charThree").appendTo(".defender");
+    }
 });
 $(".charFour").on("click", function() {
-    // alert("hey");
+    countClick1++
+    countClick2++
+    countClick3++;
+    countClick4++;
+    countClick5++;
+    if(countClick4==1){
     myMove("charFour"); 
+    $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    $(".charFour").appendTo(".yourCharacter");
+    }
+    if(countClick4==2){
+        $(".charFour").appendTo(".defender");
+    }
 });
 $(".charFive").on("click", function() {
-    // alert("hey");
+    countClick1++
+    countClick2++
+    countClick3++;
+    countClick4++;
+    countClick5++;
+    if(countClick5==1){
     myMove("charFive"); 
+    $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    $(".charFive").appendTo(".yourCharacter");
+    }
+    if(countClick5==2){
+        $(".charFive").appendTo(".defender");
+    }
 });
+// $(".defenders")[0].position.top
+
 
     </script>
 </body>
