@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Arvo:700|Tajawal" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -23,19 +23,74 @@
     </div>
     <div class="wrapper characters">
         <div class="charOne" >
+            <div id="Mal">
+            <p class="charNames">
+                Malakili
+            </p>
+            <br>
+            <p class="hp">
+                Health Points:
+            </p>
+            <span id="malHealthP">158</span>
+            </div>
+            <!-- <figcaption> Malakili </figcaption> -->
         </div>
         <div class="charTwo">
+            <!-- <a class="charNames">Chewbacca</a> -->
+            <div id="Mal">
+                    <p class="charNames">
+                        Malakili
+                    </p>
+                    <br>
+                    <p class="hp">
+                        Health Points:
+                    </p>
+                    <span id="malHealthP">158</span>
+                    </div>
         </div>
         <div class="charThree">
+            <!-- <a class="charNames">Greedo</a> -->
+            <div id="Mal">
+                    <p class="charNames">
+                        Malakili
+                    </p>
+                    <br>
+                    <p class="hp">
+                        Health Points:
+                    </p>
+                    <span id="malHealthP">158</span>
+                    </div>
         </div>
         <div class="charFour">
+            <!-- <a class="charNames">Lando</a> -->
+            <div id="Mal">
+                    <p class="charNames">
+                        Malakili
+                    </p>
+                    <br>
+                    <p class="hp">
+                        Health Points:
+                    </p>
+                    <span id="malHealthP">158</span>
+                    </div>
         </div>
         <div class="charFive">
+            <!-- <a class="charNames">Kitonak</a> -->
+            <div id="Mal">
+                    <p class="charNames">
+                        Malakili
+                    </p>
+                    <br>
+                    <p class="hp">
+                        Health Points:
+                    </p>
+                    <span id="malHealthP">158</span>
+                    </div>
         </div>
     </div>
     <div class="wrapper myButtons">
         <!-- <div> -->
-                <button type="button">VENGENCE</button>
+                <button id="vengence" type="button">VENGENCE</button>
         <!-- </div> -->
             
     </div>
@@ -89,8 +144,10 @@ $(".charOne").on("click", function() {
     countClick3++;
     countClick4++;
     countClick5++;
+    alert(char.char1.name);
     if(countClick1==1){
     myMove("charOne"); 
+   // alert(char.char1.name);
     // $(".wrapper.buttons").css({top: 200, left: 200, position:'absolute'})
     // $(".wrapper.myButtons").appendTo(".yourCharacter");
     $(".wrapper.myButtons").css({top: 400, position:'absolute'})
@@ -99,6 +156,7 @@ $(".charOne").on("click", function() {
     if(countClick1==2){
         $(".charOne").appendTo(".defender");
     }
+    return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 });
 $(".charTwo").on("click", function() {
     countClick1++
@@ -106,14 +164,18 @@ $(".charTwo").on("click", function() {
     countClick3++;
     countClick4++;
     countClick5++;
+    var readyToBattle=false;
     if(countClick2==1){
     myMove("charTwo"); 
     $(".wrapper.myButtons").css({top: 400, position:'absolute'})
     $(".charTwo").appendTo(".yourCharacter");
     }
     if(countClick2==2){
+       // console.log()
+        $(".char.char1.name").appendTo(".defender");
         $(".charTwo").appendTo(".defender");
     }
+    return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 });
 $(".charThree").on("click", function() {
     countClick1++
@@ -160,7 +222,15 @@ $(".charFive").on("click", function() {
         $(".charFive").appendTo(".defender");
     }
 });
-// $(".defenders")[0].position.top
+$("#vengence").on("click", function(){
+    for(i=0;i<countClickArray.length;i++){
+        if(countClickArray[i]==2){
+            var readyToBattle=true;
+            break;
+        }
+    }
+
+});
 
 
     </script>

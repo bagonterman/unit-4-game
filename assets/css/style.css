@@ -6,6 +6,47 @@ h1{
     letter-spacing: 10px; 
     text-align: center;
 }
+/* p.charNames{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    margin-top:-100px;
+    position: absolute;
+    position: relative;
+    float:left;
+     margin-top:100px; 
+     margin-left:-10%;
+    text-align: center;
+    letter-spacing: 5px; 
+    text-align: center;
+
+} */
+div#Mal{
+    /* margin:auto; */
+    /* position:absolute; */
+    /* margin-inline-end: 1in; */
+    font-family: 'Open Sans Condensed', sans-serif;
+    float:left;
+}
+p.hp{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12px;
+    /* position: absolute; */
+    position: relative;
+    /* float:left; */
+    margin-top:105px;
+    margin-left:-10%;
+    /* letter-spacing: 5px;  */
+
+}
+span#malHealthP{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12px;
+    /* position: absolute; */
+    position: relative;
+    /* float:left; */
+    margin-top:105px;
+    margin-left:-10px;
+    }
 .wrapper.characters{
     /* background-color: rgb(197, 152, 84); */
     display: grid;
@@ -47,7 +88,7 @@ div.charOne{
     background-image: url("../images/Malakili.jpg");
     background-size: 60%;
     background-repeat: no-repeat;
-    padding:60%;
+    padding:60%; /* helps open up box */
     padding-top:100px;
     margin-left:8%;
  }
@@ -106,10 +147,11 @@ div.charOne{
 }  */
 div.yourCharacter{
   
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, 1fr); */
-    width: 180px;
-    height: 180px;
+    /* display: grid;
+    grid-template-columns: repeat(5, 1fr); */
+    background-size: 60%;
+    /* width: 15%; */
+    /* height: 15%; */
  
  
  }

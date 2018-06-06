@@ -1,3 +1,51 @@
+ 
+  var char ={
+        char1 :{
+            name:"Malakili",
+            hPoints:150,
+            baseAttackPoints:9,
+            heroMovement:80,
+            villanMovement:50,
+            //character: document.getElementsByClassName("charOne")[0],
+            character: $(".charOne")[0]
+            //character: $(".charOne").attr('class')
+            // move:setInterval(function(){ frame(char.char1.character,this.constructor.name) }, 3)
+        },
+        char2 :{
+            name: "Lando Calrissian",
+            hPoints:100,
+            baseAttackPoints:10,
+            heroMovement:80,
+            villanMovement:50,
+            character: $(".charTwo")[0]
+        },
+        char3 :{
+            name: "Chewbacca",
+            hPoints:80,
+            baseAttackPoints:15,
+            heroMovement:80,
+            villanMovement:50,
+            character: $(".charThree")[0]
+        },
+        char4 :{
+            name:"Greedo",
+            hPoints:250,
+            baseAttackPoints:5,
+            heroMovement:80,
+            villanMovement:50,
+            character: $(".charFour")[0]
+        },
+        char5 :{
+            name:"kitonak",
+            hPoints:70,
+            baseAttackPoints:20,
+            heroMovement:80,
+            villanMovement:50,
+            character: $(".charFive")[0]
+         }
+        }
+ 
+ 
  function myMove(clss) {
     
      var pos = 0;
