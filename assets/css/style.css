@@ -57,30 +57,29 @@ span#malHealthP{
 
 }
 .wrapper.myButtons{
-    /* background-color: rgb(197, 152, 84); */
-    display: grid;
-    width: 100px;
-    height: 100px;
-    background: red;
+    
+    /* display: grid; */
+    width: 200px;
+    height: 200px;
+    /* background: red;
     transition: width 2s;
     -webkit-transition: width 2s;
-    /* justify-content: center; */
     padding: 1%;
     grid-gap: 10px;
-    margin-left:300px;
+    margin-left:300px; */
 
 }
-.button{
+/* .button{
     width: 40px;
     height: 30px;
     position: absolute;
     
 
 
-}
-.wrapper.myButtons:hover {
+} */
+/* .wrapper.myButtons:hover {
     width: 50%;
-}
+} */
 
 
 

@@ -130,6 +130,7 @@
         //     hPoints:70,
         //     baseAttackPoints:20
         // }
+        //var readyToBattle=false;
 });
 countClick1=0;
 countClick2=0;
@@ -139,6 +140,7 @@ countClick5=0;
 countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 goodGuy=[];
 badGuy=[];
+ var readyToBattle=false;
 $(".charOne").on("click", function() {
     countClick1++
     countClick2++
@@ -165,7 +167,7 @@ $(".charTwo").on("click", function() {
     countClick3++;
     countClick4++;
     countClick5++;
-    var readyToBattle=false;
+    
     if(countClick2==1){
     myMove("charTwo"); 
     // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
@@ -196,6 +198,7 @@ $(".charThree").on("click", function() {
         $(".charThree").appendTo(".defender");
         badGuy.push(char.char3);
     }
+    return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 });
 $(".charFour").on("click", function() {
     countClick1++
@@ -213,6 +216,7 @@ $(".charFour").on("click", function() {
         $(".charFour").appendTo(".defender");
         badGuy.push(char4);
     }
+    return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 });
 $(".charFive").on("click", function() {
     countClick1++
@@ -230,13 +234,20 @@ $(".charFive").on("click", function() {
         $(".charFive").appendTo(".defender");
     badGuy.push(char.char5);
     }
+    return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 });
 $("#vengence").on("click", function(){
+    alert("hey");
     for(i=0;i<countClickArray.length;i++){
         if(countClickArray[i]==2){
             var readyToBattle=true;
+            alert(readyToBattle);
             break;
         }
+    }
+    if(readyToBattle==true){
+        // alert("farts");
+         alert(goodGuy[0].name)
     }
 
 });
