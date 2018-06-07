@@ -45,7 +45,7 @@
                     <p class="hp">
                         Health Points:
                     </p>
-                    <span id="LandoHP">100</span>
+                    <span id="ChewbaccaHP">100</span>
                     </div>
         </div>
         <div class="charThree">
@@ -58,7 +58,7 @@
                     <p class="hp">
                         Health Points:
                     </p>
-                    <span id="ChewbaccaHP">80</span>
+                    <span id="GreedoHP">80</span>
                     </div>
         </div>
         <div class="charFour">
@@ -71,7 +71,7 @@
                     <p class="hp">
                         Health Points:
                     </p>
-                    <span id="GreedoHP">250</span>
+                    <span id="LandoHP">250</span>
                     </div>
         </div>
         <div class="charFive">
@@ -258,9 +258,10 @@ $("#vengence").on("click", function(){
         var badResultHP=badHP-goodAP;
         goodGuy[0].hPoints=goodResultHP;
         badGuy[0].hPoints=badResultHP;
-        alert(goodResultHP+"   "+badResultHP);
-        $("."+goodGuy[0].name+"HP").text(goodResultHP);
-        $("."+badGuy[0].name+"HP").text(badResultHP);
+        alert("."+goodGuy[0].name+"HP");
+        $("#"+goodGuy[0].name+"HP").text(goodResultHP);
+        //$("#MalakiliHP").text(goodResultHP);
+        $("#"+badGuy[0].name+"HP").text(badResultHP);
 
 
     }
