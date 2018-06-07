@@ -12,9 +12,9 @@
             // move:setInterval(function(){ frame(char.char1.character,this.constructor.name) }, 3)
         },
         char2 :{
-            name: "Lando Calrissian",
+            name: "Lando",
             hPoints:100,
-            baseAttackPoints:10,
+            baseAttackPoints:11,
             heroMovement:80,
             villanMovement:50,
             character: $(".charTwo")[0]
@@ -36,7 +36,7 @@
             character: $(".charFour")[0]
         },
         char5 :{
-            name:"kitonak",
+            name:"Kitonak",
             hPoints:70,
             baseAttackPoints:20,
             heroMovement:80,

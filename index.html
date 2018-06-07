@@ -31,7 +31,7 @@
             <p class="hp">
                 Health Points:
             </p>
-            <span id="malHealthP">158</span>
+            <span id="MalakiliHP">150</span>
             </div>
             <!-- <figcaption> Malakili </figcaption> -->
         </div>
@@ -39,52 +39,52 @@
             <!-- <a class="charNames">Chewbacca</a> -->
             <div id="Mal">
                     <p class="charNames">
-                        Malakili
+                        Lando
                     </p>
                     <br>
                     <p class="hp">
                         Health Points:
                     </p>
-                    <span id="malHealthP">158</span>
+                    <span id="malHealthP">100</span>
                     </div>
         </div>
         <div class="charThree">
             <!-- <a class="charNames">Greedo</a> -->
             <div id="Mal">
                     <p class="charNames">
-                        Malakili
+                         Chewbacca
                     </p>
                     <br>
                     <p class="hp">
                         Health Points:
                     </p>
-                    <span id="malHealthP">158</span>
+                    <span id="malHealthP">80</span>
                     </div>
         </div>
         <div class="charFour">
             <!-- <a class="charNames">Lando</a> -->
             <div id="Mal">
                     <p class="charNames">
-                        Malakili
+                        Greedo
                     </p>
                     <br>
                     <p class="hp">
                         Health Points:
                     </p>
-                    <span id="malHealthP">158</span>
+                    <span id="malHealthP">250</span>
                     </div>
         </div>
         <div class="charFive">
             <!-- <a class="charNames">Kitonak</a> -->
             <div id="Mal">
                     <p class="charNames">
-                        Malakili
+                        Kitonak
                     </p>
                     <br>
                     <p class="hp">
                         Health Points:
                     </p>
-                    <span id="malHealthP">158</span>
+                    <span id="malHealthP">70</span>
                     </div>
         </div>
     </div>
@@ -250,7 +250,13 @@ $("#vengence").on("click", function(){
         // alert("farts");
          alert(goodGuy[0].name);
         var goodAP= Number(goodGuy[0].baseAttackPoints)*attack;
-        var goodHP= goodGuy[0].baseAttackPoints;
+        var goodHP= goodGuy[0].hPoints;
+        var badAP=Number(badGuy[0].baseAttackPoints);
+        var badHP=badGuy[0].hPoints;
+        var goodResultHP=goodHP-badAP;
+        var badResultHP=badAP-goodHP;
+        goodGuy[0].hPoints=goodResultHP;
+        badGuy[0].hPoints=badResultHP;
 
     }
 
