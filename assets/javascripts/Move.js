@@ -12,7 +12,7 @@
             // move:setInterval(function(){ frame(char.char1.character,this.constructor.name) }, 3)
         },
         char2 :{
-            name: "Lando",
+            name: "Chewbacca",
             hPoints:100,
             baseAttackPoints:11,
             heroMovement:80,
@@ -20,7 +20,7 @@
             character: $(".charTwo")[0]
         },
         char3 :{
-            name: "Chewbacca",
+            name: "Greedo",
             hPoints:80,
             baseAttackPoints:15,
             heroMovement:80,
@@ -28,7 +28,7 @@
             character: $(".charThree")[0]
         },
         char4 :{
-            name:"Greedo",
+            name:"Lando",
             hPoints:250,
             baseAttackPoints:5,
             heroMovement:80,
