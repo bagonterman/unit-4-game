@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascripts/move.js"></script>
+    <!-- ../images/Greedo.jpg -->
+    <title>Attack</title>
+</head>
+<body>
+    <div id="header">
+        <h1>
+            <strong>
+            THIS MEANS WAR!
+            </strong>
+        </h1>
+    </div>
+    <div class="wrapper characters">
+        <div class=" card charOne" >
+            <img class="card-img-top" src="assets/images/Malakili.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Malakili</h5>
+                <p class="card-text"> Health Points</p>
+                <span id="MalakiliHP">150</span>
+            <!-- <div id="Mal">
+            <p class="charNames">
+                Malakili
+            </p>
+            <br>
+            <p class="hp">
+                Health Points:
+            </p>
+            <span id="MalakiliHP">150</span> -->
+            </div>
+            <!-- <figcaption> Malakili </figcaption> -->
+        </div>
+        <div class="card charTwo">
+            <!-- <a class="charNames">Chewbacca</a> -->
+            <div id="Mal">
+                    <p class="charNames">
+                        Chewbacca
+                    </p>
+                    <br>
+                    <p class="hp">
+                        Health Points:
+                    </p>
+                    <span id="ChewbaccaHP">100</span>
+                    </div>
+        </div>
+        <div class="charThree">
+            <!-- <a class="charNames">Greedo</a> -->
+            <div id="Mal">
+                    <p class="charNames">
+                         Greedo
+                    </p>
+                    <br>
+                    <p class="hp">
+                        Health Points:
+                    </p>
+                    <span id="GreedoHP">80</span>
+                    </div>
+        </div>
+        <div class="charFour">
+            <!-- <a class="charNames">Lando</a> -->
+            <div id="Mal">
+                    <p class="charNames">
+                        Lando
+                    </p>
+                    <br>
+                    <p class="hp">
+                        Health Points:
+                    </p>
+                    <span id="LandoHP">250</span>
+                    </div>
+        </div>
+        <div class="charFive">
+            <!-- <a class="charNames">Kitonak</a> -->
+            <div id="Mal">
+                    <p class="charNames">
+                        Kitonak
+                    </p>
+                    <br>
+                    <p class="hp">
+                        Health Points:
+                    </p>
+                    <span id="KitonakHP">70</span>
+                    </div>
+        </div>
+    </div>
+    <div class="wrapper myButtons">
+        <!-- <div> -->
+                <button id="vengence" type="button">VENGENCE</button>
+        <!-- </div> -->
+            
+    </div>
+    <div class="yourCharacter">
+            
+
+    </div>
+    <div class="defender">
+            
+
+    </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+    
+        // var char1 ={
+        //     name:"Malakili",
+        //     hPoints:150,
+        //     baseAttackPoints:9
+        // }
+        // var char2 ={
+        //     name: "Lando Calrissian",
+        //     hPoints:100,
+        //     baseAttackPoints:10
+        // }
+        // var char3 ={
+        //     name: "Chewbacca",
+        //     hPoints:80,
+        //     baseAttackPoints:15
+        // }
+        // var char4 ={
+        //     name:"Greedo",
+        //     hPoints:250,
+        //     baseAttackPoints:5
+        // }
+        // var char5 ={
+        //     name:"kitonak",
+        //     hPoints:70,
+        //     baseAttackPoints:20
+        // }
+        //var readyToBattle=false;
+});
+countClick1=0;
+countClick2=0;
+countClick3=0;
+countClick4=0;
+countClick5=0;
+attack=0;
+countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
+goodGuy=[];
+badGuy=[];
+ var readyToBattle=false;
+$(".charOne").on("click", function() {
+    countClick1++
+    countClick2++
+    countClick3++;
+    countClick4++;
+    countClick5++;
+    alert(char.char1.name);
+    if(countClick1==1){
+    myMove("charOne"); 
+    // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    $(".charOne").appendTo(".yourCharacter");
+    goodGuy.push(char.char1);
+    }
+    if(countClick1==2){
+        $(".charOne").appendTo(".defender");
+        badGuy.push(char.char1);
+    }
+     return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
+    //return
+});
+$(".charTwo").on("click", function() {
+    countClick1++
+    countClick2++
+    countClick3++;
+    countClick4++;
+    countClick5++;
+    
+    if(countClick2==1){
+    myMove("charTwo"); 
+    // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    $(".charTwo").appendTo(".yourCharacter");
+    goodGuy.push(char.char2);
+    }
+    if(countClick2==2){
+       // console.log()
+        $(".char.char2.name").appendTo(".defender");
+        $(".charTwo").appendTo(".defender");
+        badGuy.push(char.char2);
+    }
+    return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
+});
+$(".charThree").on("click", function() {
+    countClick1++
+    countClick2++
+    countClick3++;
+    countClick4++;
+    countClick5++;
+    if(countClick3==1){
+    myMove("charThree"); 
+    // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    $(".charThree").appendTo(".yourCharacter");
+    goodGuy.push(char.char3);
+    }
+    if(countClick3==2){
+        $(".charThree").appendTo(".defender");
+        badGuy.push(char.char3);
+    }
+    return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
+});
+$(".charFour").on("click", function() {
+    countClick1++
+    countClick2++
+    countClick3++;
+    countClick4++;
+    countClick5++;
+    if(countClick4==1){
+    myMove("charFour"); 
+    // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    $(".charFour").appendTo(".yourCharacter");
+    goodGuy.push(char.char4);
+    }
+    if(countClick4==2){
+        $(".charFour").appendTo(".defender");
+        badGuy.push(char4);
+    }
+    return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
+});
+$(".charFive").on("click", function() {
+    countClick1++
+    countClick2++
+    countClick3++;
+    countClick4++;
+    countClick5++;
+    if(countClick5==1){
+    myMove("charFive"); 
+    // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    $(".charFive").appendTo(".yourCharacter");
+    goodGuy.push(char.char5);
+    }
+    if(countClick5==2){
+        $(".charFive").appendTo(".defender");
+    badGuy.push(char.char5);
+    }
+    return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
+});
+$("#vengence").on("click", function(){
+    attack++
+    for(i=0;i<countClickArray.length;i++){
+        if(countClickArray[i]==2){
+            var readyToBattle=true;
+            alert(readyToBattle);
+            break;
+        }
+    }
+    if(readyToBattle==true){
+        // alert("farts");
+         alert(attack+"   "+goodGuy[0].baseAttackPoints);
+        var goodAP= Number(goodGuy[0].baseAttackPoints)*attack;
+        var goodHP= goodGuy[0].hPoints;
+        var badAP=Number(badGuy[0].baseAttackPoints);
+        var badHP=badGuy[0].hPoints;
+        alert(badHP+"  "+goodAP);
+        var goodResultHP=goodHP-badAP;
+        var badResultHP=badHP-goodAP;
+        goodGuy[0].hPoints=goodResultHP;
+        badGuy[0].hPoints=badResultHP;
+        alert("."+goodGuy[0].name+"HP");
+        $("#"+goodGuy[0].name+"HP").text(goodResultHP);
+        //$("#MalakiliHP").text(goodResultHP);
+        $("#"+badGuy[0].name+"HP").text(badResultHP);
+
+
+    }
+
+});
+
+
+    </script>
+</body>
+</html>

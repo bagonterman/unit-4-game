@@ -1,0 +1,170 @@
+h1{
+    /* font-family: 'Tajawal', sans-serif; */
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 35px;
+    margin-top:20px;
+    letter-spacing: 10px; 
+    text-align: center;
+}
+/* p.charNames{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    margin-top:-100px;
+    position: absolute;
+    position: relative;
+    float:left;
+     margin-top:100px; 
+     margin-left:-10%;
+    text-align: center;
+    letter-spacing: 5px; 
+    text-align: center;
+
+} */
+/* div#Mal{
+    margin:auto;
+    position:absolute;
+    margin-inline-end: 1in;
+    font-family: 'Open Sans Condensed', sans-serif;
+    float:left;
+} */
+div.card-body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    height: 100px;
+}
+/* p.hp{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12px;
+    position: absolute;
+    position: relative;
+    float:left;
+    margin-top:105px;
+    margin-left:-10%;
+    letter-spacing: 5px; 
+
+} */
+/* span#malHealthP{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12px;
+    position: absolute;
+    position: relative;
+    float:left;
+    margin-top:105px;
+    margin-left:-10px;
+    } */
+div.wrapper.characters{
+    /* background-color: rgb(197, 152, 84); */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-columns: 100%; */
+    padding: 1%;
+    grid-gap: 10px;
+    /* height: 110px; */
+
+}
+img{
+    height:110px;
+}
+p.card-text{
+    margin-top:-10px;
+}
+/* .wrapper.myButtons{ */
+    
+    /* display: grid; */
+    /* width: 200px;
+    height: 200px; */
+    /* background: red;
+    transition: width 2s;
+    -webkit-transition: width 2s;
+    padding: 1%;
+    grid-gap: 10px;
+    margin-left:300px; */
+
+/* } */
+.button{
+    width: 60px;
+    height: 40px;
+    /* position: absolute; */
+    
+
+
+}
+/* .wrapper.myButtons:hover {
+    width: 50%;
+} */
+
+
+
+/* div.charOne{
+    background-image: url("../images/Malakili.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;
+    padding-top:100px;
+    margin-left:8%;
+ } */
+ /* div.charTwo{
+    background-image: url("../images/Chewie.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;
+    padding-top:100px;
+    margin-left:8%;
+ } */
+ div.charThree{
+    background-image: url("../images/Greedo.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;
+    padding-top:100px;
+    margin-left:8%;
+ }
+ div.charFour{
+    background-image: url("../images/landocalrissian.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;
+    padding-top:100px;
+    margin-left:8%;
+ }
+ div.charFive{
+    background-image: url("../images/Kitonak.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;
+    padding-top:100px;
+    margin-left:8%;
+ }
+
+ div.defender{
+     /* 
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding:60%;*/
+    display: grid;
+    width: 180px;
+    height: 180px;
+
+
+ } 
+ /* div.yourCharacter{
+  
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   width: 180px;
+   height: 180px;
+
+
+}  */
+div.yourCharacter{
+/*   
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-size: 60%;
+    width: 15%;
+    height: 15%; */
+    display: grid;
+    width: 180px;
+    height: 180px;
+ 
+ 
+ }

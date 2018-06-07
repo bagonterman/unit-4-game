@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,69 +22,45 @@
         </h1>
     </div>
     <div class="wrapper characters">
-        <div class="charOne" >
-            <div id="Mal">
-            <p class="charNames">
-                Malakili
-            </p>
-            <br>
-            <p class="hp">
-                Health Points:
-            </p>
-            <span id="MalakiliHP">150</span>
-            </div>
-            <!-- <figcaption> Malakili </figcaption> -->
+         <!-- <figcaption> Malakili </figcaption> -->
+        <div class=" card charOne" style="width: 10rem; height: 14rem;" >
+            <img class="card-img-top" src="assets/images/Malakili.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Malakili</h5>
+                    <p class="card-text"> Health Points: <span id="MalakiliHP">150</span></p>
+                </div>
+           
         </div>
-        <div class="charTwo">
-            <!-- <a class="charNames">Chewbacca</a> -->
-            <div id="Mal">
-                    <p class="charNames">
-                        Chewbacca
-                    </p>
-                    <br>
-                    <p class="hp">
-                        Health Points:
-                    </p>
-                    <span id="ChewbaccaHP">100</span>
-                    </div>
+        <!-- <a class="charNames">Chewbacca</a> -->
+        <div class="card charTwo" style="width: 10rem; height: 14rem;" >
+            <img class="card-img-top" src="assets/images/Chewie.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Chewbacca</h5>
+                    <p class="card-text"> Health Points: <span id="ChewbaccaHP">100</span></p>
+                </div>
         </div>
-        <div class="charThree">
+        <div class="card charThree" style="width: 10rem; height: 14rem;">
             <!-- <a class="charNames">Greedo</a> -->
-            <div id="Mal">
-                    <p class="charNames">
-                         Greedo
-                    </p>
-                    <br>
-                    <p class="hp">
-                        Health Points:
-                    </p>
-                    <span id="GreedoHP">80</span>
-                    </div>
+            <img class="card-img-top" src="assets/images/Greedo.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Greedo</h5>
+                    <p class="card-text"> Health Points: <span id="GreedoHP">80</span></p>
+                </div>
         </div>
-        <div class="charFour">
+        <div class="card charFour">
             <!-- <a class="charNames">Lando</a> -->
-            <div id="Mal">
-                    <p class="charNames">
-                        Lando
-                    </p>
-                    <br>
-                    <p class="hp">
-                        Health Points:
-                    </p>
-                    <span id="LandoHP">250</span>
-                    </div>
+            <img class="card-img-top" src="assets/images/landocalrissian.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Lando</h5>
+                    <p class="card-text"> Health Points: <span id="LandoHP">250</span></p>
+                </div>
         </div>
-        <div class="charFive">
+        <div class="card charFive">
             <!-- <a class="charNames">Kitonak</a> -->
-            <div id="Mal">
-                    <p class="charNames">
-                        Kitonak
-                    </p>
-                    <br>
-                    <p class="hp">
-                        Health Points:
-                    </p>
-                    <span id="KitonakHP">70</span>
+            <img class="card-img-top" src="assets/images/Kitonak.jpg" alt="Card image cap">
+                <div class="card-body">
+                        <h5 class="card-title">Kitonak</h5>
+                        <p class="card-text"> Health Points: <span id="KitonakHP">70</span></p>
                     </div>
         </div>
     </div>
@@ -95,8 +71,12 @@
             
     </div>
     <div class="yourCharacter">
-            
 
+    </div>
+    <div id="winLossbox">
+            <p class="card-text wins"> Wins: <span id="winsTotal">0</span></p>
+            <p class="card-text gamesWon"> Games Won: <span id="gamesWon">0</span></p>
+            <p class="card-text gamesLost"> Games Lost: <span id="gamesLost">0</span></p>
     </div>
     <div class="defender">
             
@@ -138,6 +118,9 @@ countClick3=0;
 countClick4=0;
 countClick5=0;
 attack=0;
+wins=0;
+gamesWon=0;
+gamesLost=0;
 countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 goodGuy=[];
 badGuy=[];
@@ -148,7 +131,7 @@ $(".charOne").on("click", function() {
     countClick3++;
     countClick4++;
     countClick5++;
-    alert(char.char1.name);
+    // alert(char.char1.name);
     if(countClick1==1){
     myMove("charOne"); 
     // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
@@ -156,6 +139,18 @@ $(".charOne").on("click", function() {
     goodGuy.push(char.char1);
     }
     if(countClick1==2){
+        $(".charOne").appendTo(".defender");
+        badGuy.push(char.char1);
+    }
+    if(countClick1==3){
+        $(".charOne").appendTo(".defender");
+        badGuy.push(char.char1);
+    }
+    if(countClick1==4){
+        $(".charOne").appendTo(".defender");
+        badGuy.push(char.char1);
+    }
+    if(countClick1==5){
         $(".charOne").appendTo(".defender");
         badGuy.push(char.char1);
     }
@@ -181,6 +176,24 @@ $(".charTwo").on("click", function() {
         $(".charTwo").appendTo(".defender");
         badGuy.push(char.char2);
     }
+    if(countClick2==3){
+       // console.log()
+        $(".char.char2.name").appendTo(".defender");
+        $(".charTwo").appendTo(".defender");
+        badGuy.push(char.char2);
+    }
+    if(countClick2==4){
+       // console.log()
+        $(".char.char2.name").appendTo(".defender");
+        $(".charTwo").appendTo(".defender");
+        badGuy.push(char.char2);
+    }
+    if(countClick2==5){
+       // console.log()
+        $(".char.char2.name").appendTo(".defender");
+        $(".charTwo").appendTo(".defender");
+        badGuy.push(char.char2);
+    }
     return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 });
 $(".charThree").on("click", function() {
@@ -196,6 +209,18 @@ $(".charThree").on("click", function() {
     goodGuy.push(char.char3);
     }
     if(countClick3==2){
+        $(".charThree").appendTo(".defender");
+        badGuy.push(char.char3);
+    }
+    if(countClick3==3){
+        $(".charThree").appendTo(".defender");
+        badGuy.push(char.char3);
+    }
+    if(countClick3==4){
+        $(".charThree").appendTo(".defender");
+        badGuy.push(char.char3);
+    }
+    if(countClick3==5){
         $(".charThree").appendTo(".defender");
         badGuy.push(char.char3);
     }
@@ -215,7 +240,19 @@ $(".charFour").on("click", function() {
     }
     if(countClick4==2){
         $(".charFour").appendTo(".defender");
-        badGuy.push(char4);
+        badGuy.push(char.char4);
+    }
+    if(countClick4==3){
+        $(".charFour").appendTo(".defender");
+        badGuy.push(char.char4);
+    }
+    if(countClick4==4){
+        $(".charFour").appendTo(".defender");
+        badGuy.push(char.char4);
+    }
+    if(countClick4==5){
+        $(".charFour").appendTo(".defender");
+        badGuy.push(char.char4);
     }
     return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 });
@@ -235,36 +272,119 @@ $(".charFive").on("click", function() {
         $(".charFive").appendTo(".defender");
     badGuy.push(char.char5);
     }
+    if(countClick5==3){
+        $(".charFive").appendTo(".defender");
+    badGuy.push(char.char5);
+    }
+    if(countClick5==4){
+        $(".charFive").appendTo(".defender");
+    badGuy.push(char.char5);
+    }
+    if(countClick5==5){
+        $(".charFive").appendTo(".defender");
+    badGuy.push(char.char5);
+    }
     return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 });
 $("#vengence").on("click", function(){
+    try{
     attack++
     for(i=0;i<countClickArray.length;i++){
-        if(countClickArray[i]==2){
+        if(countClickArray[i]>=2){
             var readyToBattle=true;
-            alert(readyToBattle);
+            //alert(readyToBattle);
             break;
         }
     }
     if(readyToBattle==true){
         // alert("farts");
-         alert(attack+"   "+goodGuy[0].baseAttackPoints);
+         //alert(attack+"   "+goodGuy[0].baseAttackPoints);
         var goodAP= Number(goodGuy[0].baseAttackPoints)*attack;
         var goodHP= goodGuy[0].hPoints;
         var badAP=Number(badGuy[0].baseAttackPoints);
         var badHP=badGuy[0].hPoints;
-        alert(badHP+"  "+goodAP);
+        // alert(badHP+"  "+goodAP);
         var goodResultHP=goodHP-badAP;
         var badResultHP=badHP-goodAP;
         goodGuy[0].hPoints=goodResultHP;
         badGuy[0].hPoints=badResultHP;
-        alert("."+goodGuy[0].name+"HP");
+        // alert("."+goodGuy[0].name+"HP");
         $("#"+goodGuy[0].name+"HP").text(goodResultHP);
         //$("#MalakiliHP").text(goodResultHP);
         $("#"+badGuy[0].name+"HP").text(badResultHP);
+        if(gamesWon>0){
+            alert(badResultHP+" "+goodAP);
+        }
+        if(badResultHP<=0){
+            wins++
+            console.log(badResultHP);
+            if(wins>3){
+                gamesWon++;
+                wins=0;
+                $("#gamesWon").text(gamesWon);
+                $(".charOne").appendTo(".wrapper.characters").show();
+                $(".charTwo").appendTo(".wrapper.characters").show();
+                $(".charThree").appendTo(".wrapper.characters").show();
+                $(".charFour").appendTo(".wrapper.characters").show();
+                $(".charFive").appendTo(".wrapper.characters").show();
+                $(".charFive").show();
+                $("#MalakiliHP").text(150);
+                $("#ChewbaccaHP").text(80);
+                $("#GreedoHP").text(250);
+                $("#LandoHP").text(100);
+                $("#KitonakHP").text(70);
+                goodGuy=[];//empty good guy
+                countClick1=0;
+                countClick2=0;
+                countClick3=0;
+                countClick4=0;
+                countClick5=0;
+                attack=0;
+                var goodAP="";
+                var goodHP= "";
+                var badAP="";
+                var badHP="";
+                var goodResultHP="";
+                var badResultHP="";
+                // alert(goodResultHP+"  "+badResultHP)//trying to figure out why I can't reset a new game.
+
+
+            }
+
+         $("div.card."+badGuy[0].charName).hide();
+         $("#winsTotal").text(wins);
+         badGuy=[];///empty bad guys
+        }
+        else if(goodResultHP<=0){
+            gamesLost++;
+            wins=0;
+                $("#gamesLost").text(gamesLost);
+                $(".charOne").appendTo(".wrapper.characters").show();
+                $(".charTwo").appendTo(".wrapper.characters").show();
+                $(".charThree").appendTo(".wrapper.characters").show();
+                $(".charFour").appendTo(".wrapper.characters").show();
+                $(".charFive").appendTo(".wrapper.characters").show();
+                $(".charFive").show();
+                $("#MalakiliHP").text(150);
+                $("#ChewbaccaHP").text(80);
+                $("#GreedoHP").text(250);
+                $("#LandoHP").text(100);
+                $("#KitonakHP").text(70);
+                goodGuy=[];//empty good guy
+                badGuy=[];///empty bad guys
+                countClick1=0;
+                countClick2=0;
+                countClick3=0;
+                countClick4=0;
+                countClick5=0;
+                attack=0;
+
+        }
 
 
     }
+}
+catch(err){}
 
 });
 

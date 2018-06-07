@@ -1,3 +1,12 @@
+
+body{
+    /* background-color: rgb(197, 152, 84); */
+    background-image: url("../images/StarBackground.png");
+    /* background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.6) ),url("../images/Background.png"); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
 h1{
     /* font-family: 'Tajawal', sans-serif; */
     font-family: 'Open Sans Condensed', sans-serif;
@@ -6,69 +15,40 @@ h1{
     letter-spacing: 10px; 
     text-align: center;
 }
-/* p.charNames{
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 18px;
-    margin-top:-100px;
-    position: absolute;
-    position: relative;
-    float:left;
-     margin-top:100px; 
-     margin-left:-10%;
-    text-align: center;
-    letter-spacing: 5px; 
-    text-align: center;
 
-} */
-div#Mal{
-    /* margin:auto; */
-    /* position:absolute; */
-    /* margin-inline-end: 1in; */
+div.card-body{
     font-family: 'Open Sans Condensed', sans-serif;
-    float:left;
-}
-p.hp{
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 12px;
-    /* position: absolute; */
+    width: 100%;
+    /* padding-top:80%; */
     position: relative;
-    /* float:left; */
-    margin-top:105px;
-    margin-left:-10%;
-    /* letter-spacing: 5px;  */
+    /* height: 100%px; */
+}
 
-}
-span#malHealthP{
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 12px;
-    /* position: absolute; */
-    position: relative;
-    /* float:left; */
-    margin-top:105px;
-    margin-left:-10px;
-    }
-.wrapper.characters{
+div.wrapper.characters{
     /* background-color: rgb(197, 152, 84); */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     /* grid-template-columns: 100%; */
     padding: 1%;
     grid-gap: 10px;
+    /* height: 110px; */
 
 }
-/* .wrapper.myButtons{ */
-    
-    /* display: grid; */
-    /* width: 200px;
-    height: 200px; */
-    /* background: red;
-    transition: width 2s;
-    -webkit-transition: width 2s;
-    padding: 1%;
-    grid-gap: 10px;
-    margin-left:300px; */
+img{
+    /* height:110px; */
+    /* position: absolute; */
+    height:155px;
+    /* width: 110px; */
+    /* height: 50%px; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+p.card-text{
+    margin-top:-10px;
+}
 
-/* } */
 .button{
     width: 60px;
     height: 40px;
@@ -77,29 +57,14 @@ span#malHealthP{
 
 
 }
-/* .wrapper.myButtons:hover {
-    width: 50%;
-} */
+#winLossbox{
+    margin-top:-25px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    float:right;
+    margin-right:66%;
+}
 
-
-
-div.charOne{
-    background-image: url("../images/Malakili.jpg");
-    background-size: 60%;
-    background-repeat: no-repeat;
-    padding:60%; /* helps open up box */
-    padding-top:100px;
-    margin-left:8%;
- }
- div.charTwo{
-    background-image: url("../images/Chewie.jpg");
-    background-size: 60%;
-    background-repeat: no-repeat;
-    padding:60%;
-    padding-top:100px;
-    margin-left:8%;
- }
- div.charThree{
+ /* div.charThree{
     background-image: url("../images/Greedo.jpg");
     background-size: 60%;
     background-repeat: no-repeat;
@@ -122,35 +87,22 @@ div.charOne{
     padding:60%;
     padding-top:100px;
     margin-left:8%;
- }
+ } */
 
  div.defender{
-     /* 
-    background-size: 60%;
-    background-repeat: no-repeat;
-    padding:60%;*/
+    margin-top:70px;
     display: grid;
     width: 180px;
-    height: 180px;
+    height: 230px;
 
 
  } 
- /* div.yourCharacter{
-  
-   display: grid;
-   grid-template-columns: repeat(5, 1fr);
-   width: 180px;
-   height: 180px;
 
-
-}  */
 div.yourCharacter{
-  
-    /* display: grid;
-    grid-template-columns: repeat(5, 1fr); */
-    background-size: 60%;
-    /* width: 15%; */
-    /* height: 15%; */
+
+    display: grid;
+    width: 180px;
+    height: 180px;
  
  
  }
