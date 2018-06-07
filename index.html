@@ -137,7 +137,8 @@ countClick3=0;
 countClick4=0;
 countClick5=0;
 countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
-
+goodGuy=[];
+badGuy=[];
 $(".charOne").on("click", function() {
     countClick1++
     countClick2++
@@ -147,16 +148,16 @@ $(".charOne").on("click", function() {
     alert(char.char1.name);
     if(countClick1==1){
     myMove("charOne"); 
-   // alert(char.char1.name);
-    // $(".wrapper.buttons").css({top: 200, left: 200, position:'absolute'})
-    // $(".wrapper.myButtons").appendTo(".yourCharacter");
-    $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
     $(".charOne").appendTo(".yourCharacter");
+    goodGuy.push(char.char1);
     }
     if(countClick1==2){
         $(".charOne").appendTo(".defender");
+        badGuy.push(char.char1);
     }
-    return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
+     return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
+    //return
 });
 $(".charTwo").on("click", function() {
     countClick1++
@@ -167,13 +168,15 @@ $(".charTwo").on("click", function() {
     var readyToBattle=false;
     if(countClick2==1){
     myMove("charTwo"); 
-    $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
     $(".charTwo").appendTo(".yourCharacter");
+    goodGuy.push(char.char2);
     }
     if(countClick2==2){
        // console.log()
-        $(".char.char1.name").appendTo(".defender");
+        $(".char.char2.name").appendTo(".defender");
         $(".charTwo").appendTo(".defender");
+        badGuy.push(char.char2);
     }
     return countClickArray=[countClick1,countClick2,countClick3,countClick4,countClick5];
 });
@@ -185,11 +188,13 @@ $(".charThree").on("click", function() {
     countClick5++;
     if(countClick3==1){
     myMove("charThree"); 
-    $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
     $(".charThree").appendTo(".yourCharacter");
+    goodGuy.push(char.char3);
     }
     if(countClick3==2){
         $(".charThree").appendTo(".defender");
+        badGuy.push(char.char3);
     }
 });
 $(".charFour").on("click", function() {
@@ -200,11 +205,13 @@ $(".charFour").on("click", function() {
     countClick5++;
     if(countClick4==1){
     myMove("charFour"); 
-    $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
     $(".charFour").appendTo(".yourCharacter");
+    goodGuy.push(char.char4);
     }
     if(countClick4==2){
         $(".charFour").appendTo(".defender");
+        badGuy.push(char4);
     }
 });
 $(".charFive").on("click", function() {
@@ -215,11 +222,13 @@ $(".charFive").on("click", function() {
     countClick5++;
     if(countClick5==1){
     myMove("charFive"); 
-    $(".wrapper.myButtons").css({top: 400, position:'absolute'})
+    // $(".wrapper.myButtons").css({top: 400, position:'absolute'})
     $(".charFive").appendTo(".yourCharacter");
+    goodGuy.push(char.char5);
     }
     if(countClick5==2){
         $(".charFive").appendTo(".defender");
+    badGuy.push(char.char5);
     }
 });
 $("#vengence").on("click", function(){
